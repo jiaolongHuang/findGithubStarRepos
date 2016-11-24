@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Find in GitHub</title>
+	<style type="text/css">
+		/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+		html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+		
+		.cont-wrap{
+			width: 300px;
+			padding: 10px;
+			font-size: 12px;
+		}
+		.tips{
+			margin-bottom: 10px;
+			color: #999;
+			font-size: 14px;
+		}
+		input[type="text"]{
+			width: 150px;
+			height: 24px;
+			padding: 0 5px;
+			margin-bottom: 10px;
+			line-height: 24px;
+			font-size: 14px;
+		}
+		.btn-wrap{
+			float: right;
+		}
+		.filter-btn{
+			display: inline-block;
+	    height: 28px;
+	    line-height: 28px;
+	    border: 1px solid #19b955;
+	    border-radius: 2px;
+			outline: none;
+	    color: #fff;
+	    padding: 0 12px;
+	    background-color: #f8b616;
+	    border-color: #f8b616;
+	    cursor: pointer;
+	    font-size: 14px;
+		}
+		.green-btn{
+			border: 1px solid #19b955;
+			background-color: #19b955;
+		}
+		.time-cost,
+		.repos-count{
+			margin-top: 10px;
+			font-size: 14px;
+		}
+		.list-wrap{
+			width: 100%;
+			max-height: 400px;
+			border: 1px solid #ececec;
+			overflow-y: auto;
+			margin: 10px 0;
+		}
+		.list-wrap ul{
+			padding: 5px 10px;
+		}
+		.list-wrap a{
+			color: #4078c0;
+			font-size: 13px;
+			line-height: 22px;
+			text-decoration: none;
+		}
+		.list-wrap a:hover{
+			text-decoration: underline;
+		}
+		.list-wrap strong{
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div class="cont-wrap">
+		<p class="tips">Find What U Want~</p>
+
+		<div class="filter-wrap">
+			<input type="text" name="username" class="user-name" value="jiaolonghuang" placeholder="jiaolonghuang" />
+			<div>
+				<input type="text" name="filtertxt" class="filter-txt" placeholder="search name" />
+				<div class="btn-wrap">
+					<input type="button" value="Repos" class="filter-btn green-btn" data-type="repos" id="filter-repos">
+					<input type="button" value="Star" class="filter-btn" data-type="star" id="filter-star">
+				</div>
+			</div>
+		</div>
+
+		<p class="time-cost" style="display: none;">
+			Searching Net Costs Time:&nbsp;<span >0ms</span>
+		</p>
+		<p class="repos-count" style="display: none;">
+			The Count of Related Repos is:&nbsp;<span >0</span>
+		</p>
+		
+		<p class="getting-data" style="display: none;">获取数据中。。。</p>
+		<div class="list-wrap" style="display: none;">
+			<ul></ul>
+		</div>
+	</div>
+	
+
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="popup.js"></script>
+</body>
+</html>

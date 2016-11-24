@@ -1,0 +1,22 @@
+{
+	"name": "Github快速查找R&S",
+	"version": "0.1",
+	"manifest_version": 2,
+	"description": "Github快速查找Repositories和Stars",
+	"browser_action": {
+		"default_title": "Find R&S", //鼠标移到图标显示的文字 
+		"default_popup": "popup.html" //单击图标执行的文件
+	},
+	"permissions" : ["tabs","storage","notifications"],
+	"content_scripts": [{
+		"all_frames": true,
+		"matches": ["http://*/*","https://*/*"],
+		"js": ["jquery-1.9.1.min.js", "popup.js"],
+		"run_at": "document_start"
+	}],
+	"icons": {
+		"16" : "icon/timg.png",
+		"48" : "icon/timg.png",
+		"128" : "icon/timg.png"
+	}
+}
